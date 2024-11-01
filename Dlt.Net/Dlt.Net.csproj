@@ -14,6 +14,7 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>git</RepositoryType>
 		<IncludeSymbols>true</IncludeSymbols>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
 
