@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -10,19 +10,8 @@
 		<VersionPrefix>1.0.0</VersionPrefix>
 		<RepositoryUrl>https://github.com/CloudHolic/Dlt.Net.git</RepositoryUrl>
 		<Description>A C# library to handle AUTOSAR/GENIVI DLT.</Description>
-		<PackageProjectUrl>https://github.com/CloudHolic/Dlt.Net</PackageProjectUrl>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<RepositoryType>git</RepositoryType>
-		<IncludeSymbols>true</IncludeSymbols>
-		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<PackageProjectUrl>https://github.com/CloudHolic/Dlt.Net.git</PackageProjectUrl>
 	</PropertyGroup>
-
-	<ItemGroup>
-	  <None Include="..\README.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	</ItemGroup>
 
 	<ItemGroup>
 	    <PackageReference Include="OneOf" Version="3.0.271" />
