@@ -66,6 +66,15 @@ public class DltStorageHeader : DltHeader
         return new DltStorageHeader(second, microsecond, ecuId, MinLength);
     }
 
+    public static bool IsHeaderExists(byte[] data)
+    {
+        if (data.Length < MinLength)
+            return false;
+
+        var pattern = data[..4];
+        return DltPattern.SequenceEqual(pattern);
+    }
+
     public override string ToString() =>
         $"StorageHeader(Seconds:{Seconds}, " +
         $"Microseconds:{Microseconds}, " +

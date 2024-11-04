@@ -1,5 +1,6 @@
 # Dlt.Net
-A C# library to handle AUTOSAR/GENIVI DLT.
+A C# library to handle AUTOSAR/GENIVI DLT protocol, which is based on AUTOSAR Specification of Diagnostic Log and Trace V1.2.0 R4.0 Rev3, Section 7.7 Protocol Specification.
+Inspired by [PyDLT](https://github.com/mikiepure/pydlt)
 
 ### Limitation
 

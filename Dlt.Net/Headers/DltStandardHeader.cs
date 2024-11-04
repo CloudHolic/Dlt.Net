@@ -155,6 +155,8 @@ public class DltStandardHeader : DltHeader
         return new DltStandardHeader(useExtendedHeader, msbFirst, version, messageCounter, totalLength, ecuId, sessionId, timestamp, offset);
     }
 
+    public static int GetMessageLength(byte[] data) => BitConverter.ToUInt16(data.GetBytes(2, 2, false));
+
     public override string ToString()
     {
         var result = $"StandardHeader(UseExtendedHeader:{UseExtendedHeader}, " +

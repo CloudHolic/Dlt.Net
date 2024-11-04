@@ -7,7 +7,7 @@
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Title>Dlt.Net</Title>
 		<Authors>CloudHolic</Authors>
-		<VersionPrefix>1.0.0</VersionPrefix>
+		<VersionPrefix>1.0.1</VersionPrefix>
 		<RepositoryUrl>https://github.com/CloudHolic/Dlt.Net.git</RepositoryUrl>
 		<Description>A C# library to handle AUTOSAR/GENIVI DLT.</Description>
 		<PackageProjectUrl>https://github.com/CloudHolic/Dlt.Net</PackageProjectUrl>

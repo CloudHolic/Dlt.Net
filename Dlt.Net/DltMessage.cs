@@ -99,8 +99,25 @@ public class DltMessage
 
         return new DltMessage(stgHeader, stdHeader, extHeader, payload, data[..(stdHeader.TotalLength + stgHeaderLength)]);
     }
+    
+    public static bool SplitMessageBytes(ref byte[] bytes, ref byte[] msgBytes, bool existStorageHeader = true)
+    {
+        if (existStorageHeader && !DltStorageHeader.IsHeaderExists(bytes))
+            return false;
 
-    #region ToStrings
+        var messageLength = DltStandardHeader.GetMessageLength(bytes[16..]);
+        var totalLength = messageLength + 16;
+
+        if (bytes.Length < totalLength)
+            return false;
+
+        msgBytes = bytes[totalLength..];
+        bytes = bytes[..totalLength];
+
+        return true;
+    }
+
+    #region ToString
 
     public override string ToString() =>
         $"{Time} {(Timestamp == null ? "<None>" : Timestamp.ToString())} {Count} {EcuId} {AppId} {CtxId} " +
