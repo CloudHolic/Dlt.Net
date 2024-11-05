@@ -117,6 +117,16 @@ public class DltMessage
         return true;
     }
 
+    /// <summary>
+    /// Change all '0x20' to '0x0'
+    /// </summary>
+    public static void TransformNullCharacter(ref byte[] message)
+    {
+        for(var i = 0; i < message.Length; i++)
+            if (message[i] == 0x20)
+                message[i] = 0x0;
+    }
+
     #region ToString
 
     public override string ToString() =>

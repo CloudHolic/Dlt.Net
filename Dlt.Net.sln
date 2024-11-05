@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dlt.Net", "Dlt.Net\Dlt.Net.csproj", "{F23E4B34-1A58-4CB0-9CBB-05F10ACF50AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dlt.Net", "Dlt.Net\Dlt.Net.csproj", "{F23E4B34-1A58-4CB0-9CBB-05F10ACF50AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dlt.Net.Tests", "Dlt.Net.Tests\Dlt.Net.Tests.csproj", "{73B85C3A-E4EB-4991-B699-2CAA847AD7E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F23E4B34-1A58-4CB0-9CBB-05F10ACF50AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F23E4B34-1A58-4CB0-9CBB-05F10ACF50AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F23E4B34-1A58-4CB0-9CBB-05F10ACF50AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B85C3A-E4EB-4991-B699-2CAA847AD7E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B85C3A-E4EB-4991-B699-2CAA847AD7E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B85C3A-E4EB-4991-B699-2CAA847AD7E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B85C3A-E4EB-4991-B699-2CAA847AD7E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

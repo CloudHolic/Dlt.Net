@@ -13,7 +13,7 @@ public class StringArgument : Argument
 
     private StringArgument(string payload, ArgumentType type, int length) : base(type, length)
     {
-        Data = payload.Trim('\0');
+        Data = payload.Trim('\0').Replace('\0', ' ');
     }
 
     public static StringArgument CreateStringArgument(byte[] data, bool isAscii, bool msbFirst)
