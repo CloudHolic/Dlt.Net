@@ -105,26 +105,17 @@ public class DltMessage
         if (existStorageHeader && !DltStorageHeader.IsHeaderExists(bytes))
             return false;
 
-        var messageLength = DltStandardHeader.GetMessageLength(bytes[16..]);
-        var totalLength = messageLength + 16;
+        var position = existStorageHeader ? 16 : 0;
+        var messageLength = DltStandardHeader.GetMessageLength(bytes[position..]);
+        var totalLength = messageLength + position;
 
         if (bytes.Length < totalLength)
             return false;
 
-        msgBytes = bytes[totalLength..];
-        bytes = bytes[..totalLength];
+        msgBytes = bytes[..totalLength];
+        bytes = bytes[totalLength..];
 
         return true;
-    }
-
-    /// <summary>
-    /// Change all '0x20' to '0x0'
-    /// </summary>
-    public static void TransformNullCharacter(ref byte[] message)
-    {
-        for(var i = 0; i < message.Length; i++)
-            if (message[i] == 0x20)
-                message[i] = 0x0;
     }
 
     #region ToString
